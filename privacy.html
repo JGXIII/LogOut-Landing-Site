@@ -38,8 +38,8 @@
 
 <div class="box">
   <h1>Privacy Policy for LogOut</h1>
-  <p><strong>Last updated:</strong> <span class="highlight">09 May 2026</span></p>
-  <p>LogOut is a habit-building iOS app designed to help you reduce mindless scrolling by locking your apps and requiring you to walk 10 steps to unlock them. This policy explains what data we collect, why, and how it is protected.</p>
+  <p><strong>Last updated:</strong> <span class="highlight">14 May 2026</span></p>
+  <p>LogOut is a habit-building iOS app designed to help you reduce mindless scrolling by locking your apps and requiring you to walk to unlock them. This policy explains what data we collect, why, and how it is protected.</p>
 </div>
 
 <h2>1. Overview</h2>
@@ -72,6 +72,7 @@
   <ul>
     <li>Session history is stored locally for up to 90 days using Apple's standard UserDefaults</li>
     <li>App settings (session duration, strict mode preference, trial status)</li>
+    <li>Focus Rules preferences — which app categories you have chosen to block (e.g. Social, Entertainment, Games). Stored as an opaque Apple-issued token in an iOS App Group shared between the App and its background Screen Time extension. These tokens are processed entirely on-device and are never transmitted to us</li>
     <li>Firebase authentication tokens — stored securely in UserDefaults for session management</li>
   </ul>
 </div>
@@ -82,7 +83,7 @@
     <tr><th>Permission</th><th>Why it's needed</th><th>Data shared externally?</th></tr>
     <tr>
       <td>Screen Time (FamilyControls)</td>
-      <td>Blocks the app at session end so only walking unlocks it — the core feature</td>
+      <td>Blocks selected app categories during or at the end of a session; walking the required steps restores access. In Focus Lock mode, blocking is enforced by a background system extension that stays active even if the App is closed. Your category preferences are stored locally as opaque Apple-issued tokens and are never transmitted externally</td>
       <td>No</td>
     </tr>
     <tr>
