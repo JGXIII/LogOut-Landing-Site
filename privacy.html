@@ -38,7 +38,7 @@
 
 <div class="box">
   <h1>Privacy Policy for LogOut</h1>
-  <p><strong>Last updated:</strong> <span class="highlight">26 June 2026</span></p>
+  <p><strong>Last updated:</strong> <span class="highlight">4 July 2026</span></p>
   <p>LogOut is a habit-building iOS app designed to help you reduce mindless scrolling by locking your apps and requiring you to walk to unlock them. This policy explains what data we collect, why, and how it is protected.</p>
 </div>
 
@@ -85,6 +85,8 @@
     <li>Focus Rules preferences — which app categories you have chosen to block (e.g. Social, Entertainment, Games). Stored as an opaque Apple-issued token in an iOS App Group shared between the App and its background Screen Time extension. These tokens are processed entirely on-device and are never transmitted to us</li>
     <li>Firebase authentication tokens — stored securely in UserDefaults for session management</li>
   </ul>
+  <p style="margin-top:12px;"><strong>2.5 Anonymous usage analytics</strong></p>
+  <p>To understand how features are used and where the app can improve, LogOut collects anonymous usage events (e.g. which onboarding screens are viewed, when sessions start and complete). Each event is tagged with a random per-install identifier and the app version. This identifier is generated on-device, is <strong>not</strong> derived from your Apple ID, device ID, or any hardware identifier, and is <strong>not</strong> linked to your name, email, or account. It contains no personal information and is used only in aggregate.</p>
 </div>
 
 <h2>3. Device Permissions</h2>
@@ -136,21 +138,27 @@
   We use Firebase Authentication and Cloud Firestore to store your account and session data securely. Firebase may process data on servers located in the United States and other regions. Google's privacy policy applies: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></p>
 
   <p><strong>4.2 Resend (Resend Inc.)</strong><br>
-  We use Resend to deliver transactional emails (welcome email, weekly insights, re-engagement). Your email address and first name are passed to Resend solely for this purpose. Resend's privacy policy applies: <a href="https://resend.com/legal/privacy-policy">resend.com/legal/privacy-policy</a></p>
+  We use Resend to deliver transactional and lifecycle emails (email verification, welcome, weekly and monthly summaries, milestone anniversaries, re-engagement, and trial reminders). Your email address and first name are passed to Resend solely for this purpose. Resend's privacy policy applies: <a href="https://resend.com/legal/privacy-policy">resend.com/legal/privacy-policy</a></p>
 
   <p><strong>4.3 Apple</strong><br>
   Sign in with Apple, the App Store, StoreKit (subscriptions), HealthKit, WatchConnectivity, and Live Activities are Apple services. Apple's privacy policy applies: <a href="https://www.apple.com/legal/privacy">apple.com/legal/privacy</a></p>
 
-  <p><span class="highlight">We do not use advertising SDKs, analytics platforms, or any third-party tracking tools.</span></p>
+  <p><strong>4.4 Cloudflare (Cloudflare, Inc.)</strong><br>
+  Our email delivery and anonymous usage analytics run on a Cloudflare Worker, and aggregated analytics counters are stored using Cloudflare's key-value storage. Cloudflare processes this data as our infrastructure provider. Cloudflare's privacy policy applies: <a href="https://www.cloudflare.com/privacypolicy/">cloudflare.com/privacypolicy</a></p>
+
+  <p><span class="highlight">We do not use advertising SDKs or third-party tracking or attribution tools.</span> The only usage analytics we collect are the anonymous, first-party events described in §2.5.</p>
 </div>
 
 <h2>5. Email Communications</h2>
 <div class="box">
   <p>If you create an account with an email address, you may receive:</p>
   <ul>
+    <li><strong>Email verification</strong> — sent when you sign up with an email address, to confirm it's yours</li>
     <li><strong>Welcome email</strong> — sent once when you first create your account</li>
-    <li><strong>Weekly insights</strong> — a summary of your habit stats, sent at most once every 7 days when you open the app</li>
-    <li><strong>Re-engagement nudge</strong> — a single reminder if you haven't completed a session in 7 or more days</li>
+    <li><strong>Weekly summary</strong> — a recap of your week's habit stats, sent at most once every 7 days when you open the app</li>
+    <li><strong>Monthly summary and milestone anniversaries</strong> — a recap of your month, plus one-off notes at your 3-, 6-, and 12-month marks</li>
+    <li><strong>Re-engagement nudge</strong> — a reminder if you haven't completed a session in 7 or more days</li>
+    <li><strong>Trial reminder</strong> — a single note before your free trial ends</li>
   </ul>
   <p>To stop receiving emails, reply to any email with "Unsubscribe" or contact us at <a href="mailto:support@logoutapp.net">support@logoutapp.net</a>. We will remove you within 5 business days.</p>
 </div>
