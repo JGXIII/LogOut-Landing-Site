@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>How LogOut Works &mdash; Lock Your Apps, Walk to Unlock</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How to stop doomscrolling with LogOut: set a timer, your distracting apps lock via iOS Screen Time, and you walk real, sensor-verified steps to unlock them. Full walkthrough and FAQ.">
+  <meta name="theme-color" content="#0a0e0b">
+  <link rel="canonical" href="https://logoutapp.net/how-it-works.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="How LogOut works">
+  <meta property="og:description" content="Set a timer. Apps lock. Walk to unlock. The full walkthrough.">
+  <meta property="og:url" content="https://logoutapp.net/how-it-works.html">
+  <meta property="og:image" content="https://logoutapp.net/assets/logo.png">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="apple-touch-icon" href="assets/logo.png">
+  <link rel="stylesheet" href="assets/site.css">
+  <noscript><style>.reveal { opacity: 1; transform: none; }</style></noscript>
+
+  <!-- FAQ structured data — keep in sync with the visible FAQ section below.
+       This is what lets Google show rich FAQ results and lets AI search
+       engines quote these answers for queries like "how do I stop
+       doomscrolling". -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I stop doomscrolling?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Add friction where the autopilot lives. Willpower fails because a feed is always one free tap away — so make the tap not free. With LogOut you set a timer before you start scrolling; when it ends, your apps lock via iOS Screen Time and the only way back in is to walk real steps. The scroll session gets a hard ending, and standing up breaks the trance far more reliably than a notification you can dismiss." }
+      },
+      {
+        "@type": "Question",
+        "name": "I'm addicted to my phone. Will this actually help?",
+        "acceptedAnswer": { "@type": "Answer", "text": "If your problem is compulsive checking and endless feeds, that's exactly the pattern LogOut is built to interrupt. It doesn't lecture or shame you; it makes continuing cost more than stopping, and puts a short walk between impulse and feed. Most people notice the reflex-open weakening within a couple of weeks. If your phone use is seriously affecting your mental health, an app is a tool, not a treatment — talk to a professional too." }
+      },
+      {
+        "@type": "Question",
+        "name": "How is LogOut different from Apple's built-in Screen Time limits?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Apple's app limits end with an 'Ignore Limit' button — one tap and you're back in the feed. LogOut uses the same system-level Screen Time enforcement but replaces the free tap with a real cost: steps verified by your iPhone's motion sensors. Same shield, an actual lock on it." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I cheat LogOut by shaking my phone?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The iPhone's motion coprocessor — the same dedicated hardware Apple uses for fitness tracking — verifies real walking gait, not hand-waving. You have to actually walk your step goal to unlock your apps." }
+      },
+      {
+        "@type": "Question",
+        "name": "What if there's a genuine emergency while my apps are locked?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Phone calls, Messages, and system apps are never blocked. For true emergencies, LogOut includes an Emergency Bypass that lifts the lock immediately." }
+      },
+      {
+        "@type": "Question",
+        "name": "Which apps does LogOut block?",
+        "acceptedAnswer": { "@type": "Answer", "text": "By default, every non-essential category: Social Media, Entertainment, Games, Browsers, Shopping and more. iOS categorises your apps automatically, so it works out of the box, and you can customise your Focus Rules if you want to." }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if I force-quit LogOut?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Nothing changes. The lock is enforced by iOS Screen Time at the system level, backed by a background extension that keeps running whether or not the app is open." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need an account to use LogOut?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. LogOut works fully without one. An optional account syncs your session history and settings across reinstalls — that's all it's for." }
+      },
+      {
+        "@type": "Question",
+        "name": "Where does my data go?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Steps are counted on-device. Which apps you block never leaves your phone — Apple stores those choices as opaque tokens that even LogOut can't read. No ads, no data sales, ever." }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does LogOut cost?",
+        "acceptedAnswer": { "@type": "Answer", "text": "LogOut is free for your first 7 days with every feature and no paywall during onboarding. After that it's a simple subscription, cancel anytime." }
+      },
+      {
+        "@type": "Question",
+        "name": "What do I need to run LogOut?",
+        "acceptedAnswer": { "@type": "Answer", "text": "An iPhone on iOS 17 or later, and a one-time Screen Time permission. Apple Watch is supported but optional." }
+      }
+    ]
+  }
+  </script>
+
+  <!-- HowTo structured data mirroring the walkthrough below. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to stop doomscrolling with LogOut",
+    "description": "Lock your distracting apps with a timer and unlock them by walking real steps.",
+    "step": [
+      { "@type": "HowToStep", "name": "Set your timer", "text": "Start a session in LogOut — anywhere from 1 to 120 minutes — from the app or a Home Screen widget." },
+      { "@type": "HowToStep", "name": "Choose your lock", "text": "Delay Lock lets you use your phone until the countdown ends; Instant Lock blocks distracting apps the moment the session starts." },
+      { "@type": "HowToStep", "name": "Your apps lock", "text": "iOS Screen Time shields social media, entertainment, games, browsers and shopping apps at the system level." },
+      { "@type": "HowToStep", "name": "Walk to unlock", "text": "Walk your step goal — verified by the iPhone's motion coprocessor or your Apple Watch — to restore access." },
+      { "@type": "HowToStep", "name": "Track your progress", "text": "Every session records streaks, steps, distance and time reclaimed." }
+    ]
+  }
+  </script>
+
+  <style>
+    .page-hero {
+      position: relative;
+      overflow: hidden;
+      padding: 150px 0 40px;
+      text-align: center;
+    }
+    .page-hero .wrap { position: relative; z-index: 1; }
+
+    /* ---------- Walkthrough timeline ---------- */
+    .walkthrough { padding-top: 48px; }
+    .wt-step {
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      gap: 26px;
+      max-width: 720px;
+      margin: 0 auto;
+      position: relative;
+      padding-bottom: 64px;
+    }
+    .wt-step:last-child { padding-bottom: 0; }
+    .wt-rail {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .wt-num {
+      flex: 0 0 auto;
+      width: 56px; height: 56px;
+      border-radius: 18px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; font-weight: 800;
+      color: var(--green-lite);
+      background: rgba(127, 191, 127, 0.08);
+      border: 1px solid var(--line-soft);
+    }
+    .wt-step:nth-child(even) .wt-num { color: var(--orange); background: rgba(255, 140, 42, 0.08); border-color: rgba(255, 140, 42, 0.2); }
+    .wt-line {
+      flex: 1;
+      width: 1px;
+      margin-top: 14px;
+      background: linear-gradient(180deg, var(--line-soft), transparent);
+    }
+    .wt-step:last-child .wt-line { display: none; }
+    .wt-body h2 {
+      font-size: clamp(22px, 3vw, 28px);
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin: 12px 0 12px;
+    }
+    .wt-body p { color: var(--muted); font-size: 15.5px; line-height: 1.65; margin: 0 0 14px; }
+    .wt-body p:last-child { margin-bottom: 0; }
+    .wt-body strong { color: var(--ink); }
+    .wt-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+    .wt-tags span {
+      font-size: 12px; font-weight: 700;
+      color: var(--muted);
+      border: 1px solid var(--line);
+      background: var(--card);
+      border-radius: 999px;
+      padding: 6px 14px;
+    }
+    @media (max-width: 560px) {
+      .wt-step { grid-template-columns: 52px 1fr; gap: 18px; }
+      .wt-num { width: 44px; height: 44px; border-radius: 14px; font-size: 15px; }
+    }
+
+    /* ---------- FAQ ---------- */
+    .faq { max-width: 720px; margin: 0 auto; }
+    .faq details {
+      border: 1px solid var(--line);
+      background: var(--card);
+      border-radius: 16px;
+      margin-bottom: 10px;
+      overflow: hidden;
+      transition: border-color 200ms ease;
+    }
+    .faq details[open] { border-color: rgba(127, 191, 127, 0.3); }
+    .faq summary {
+      list-style: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 22px;
+      font-size: 15.5px;
+      font-weight: 700;
+      letter-spacing: -0.2px;
+      user-select: none;
+    }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary .chev {
+      flex: 0 0 auto;
+      transition: transform 260ms var(--ease-out);
+      color: var(--faint);
+    }
+    .faq details[open] summary .chev { transform: rotate(45deg); color: var(--green-lite); }
+    .faq .answer {
+      padding: 0 22px 20px;
+      font-size: 14.5px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+    .faq .answer p { margin: 0 0 10px; }
+    .faq .answer p:last-child { margin-bottom: 0; }
+
+    /* ---------- Final CTA ---------- */
+    .final { position: relative; overflow: hidden; text-align: center; padding: 110px 0 130px; }
+    .final .wrap { position: relative; z-index: 1; }
+  </style>
+</head>
+<body>
+
+<div class="top-bar"></div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html" aria-label="LogOut home">
+      <img class="mark" src="assets/logo.png" alt="">
+      <img class="word" src="assets/wordmark.png" alt="LogOut">
+    </a>
+    <a class="nav-link" href="how-it-works.html" aria-current="page">How it works</a>
+    <a class="nav-link" href="why.html">Why walking</a>
+    <!-- href injected by assets/site.js (APP_STORE_URL) -->
+    <a class="nav-cta" data-app-store href="#">Get the app</a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="glow green" style="width:520px;height:420px;top:-160px;left:50%;margin-left:-260px;"></div>
+  <div class="wrap">
+    <p class="section-kicker reveal">The full walkthrough</p>
+    <h1 class="display reveal" style="--d:80ms">Simple on purpose.<br><span class="accent">Strict on purpose.</span></h1>
+    <p class="lede reveal" style="--d:160ms; margin: 0 auto;">
+      LogOut does one thing: it puts a walk between you and your most
+      distracting apps. Here's exactly what happens, start to finish.
+    </p>
+  </div>
+</section>
+
+<section class="walkthrough">
+  <div class="wrap">
+
+    <div class="wt-step reveal">
+      <div class="wt-rail"><div class="wt-num">01</div><div class="wt-line"></div></div>
+      <div class="wt-body">
+        <h2>Set your timer</h2>
+        <p>Open LogOut and start a session &mdash; anywhere from <strong>1 to 120 minutes</strong>. That's your window: the last lap of tonight's scroll, a study block, or a full deep-work session.</p>
+        <p>Start it from the app or a <strong>Home Screen widget</strong>. The countdown follows you on the Lock Screen and in the Dynamic Island via Live Activities &mdash; and if you wear an <strong>Apple Watch</strong>, the session mirrors live to your wrist.</p>
+      </div>
+    </div>
+
+    <div class="wt-step reveal">
+      <div class="wt-rail"><div class="wt-num">02</div><div class="wt-line"></div></div>
+      <div class="wt-body">
+        <h2>Choose your lock</h2>
+        <p><strong>Delay Lock</strong> &mdash; use your phone freely while the countdown runs. When it hits zero, your distracting apps lock automatically. It turns &ldquo;ten more minutes&rdquo; into an actual ten minutes.</p>
+        <p><strong>Instant Lock</strong> &mdash; everything distracting locks the moment the session starts, so there's nothing to reach for while you focus or wind down for sleep.</p>
+        <p>Both roads end the same place: the apps are unavailable until you move.</p>
+      </div>
+    </div>
+
+    <div class="wt-step reveal">
+      <div class="wt-rail"><div class="wt-num">03</div><div class="wt-line"></div></div>
+      <div class="wt-body">
+        <h2>Your apps lock &mdash; for real</h2>
+        <p>LogOut enforces the lock with <strong>iOS Screen Time</strong>, the same system-level shield parents use for their kids' devices &mdash; except you're both the parent and the kid. Locked apps show a shield instead of a feed, and force-quitting LogOut doesn't lift it.</p>
+        <p>By default every non-essential category is covered. iOS categorises your apps automatically, so there's nothing to configure &mdash; though you can tailor your Focus Rules if you want to.</p>
+        <div class="wt-tags">
+          <span>Social Media</span><span>Entertainment</span><span>Games</span><span>Browsers</span><span>Shopping</span><span>+ more</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="wt-step reveal">
+      <div class="wt-rail"><div class="wt-num">04</div><div class="wt-line"></div></div>
+      <div class="wt-body">
+        <h2>Walk to unlock</h2>
+        <p>The only way back in is on foot: <strong>10, 20, 30 steps, or a custom goal</strong>. Steps are verified by your iPhone's motion coprocessor &mdash; the dedicated chip that knows the difference between walking and wiggling your phone.</p>
+        <p>Each footfall lands with a haptic tick, and if you wear an Apple Watch your wrist counts too. Around the corner and back is usually enough &mdash; and usually enough to forget why you wanted the feed.</p>
+      </div>
+    </div>
+
+    <div class="wt-step reveal">
+      <div class="wt-rail"><div class="wt-num">05</div><div class="wt-line"></div></div>
+      <div class="wt-body">
+        <h2>Watch the pattern shift</h2>
+        <p>Every session is recorded: <strong>streaks, steps, distance, and time reclaimed</strong>. The first week is novelty. By the third, the reflex-open starts losing its grip &mdash; and you have the chart to prove it.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ========================= FAQ ========================= -->
+<section>
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <p class="section-kicker">Questions</p>
+      <h2 class="section-title">Fair questions,<br>straight answers.</h2>
+    </div>
+
+    <div class="faq">
+      <details class="reveal">
+        <summary>How do I stop doomscrolling?
+          <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+        </summary>
+        <div class="answer">
+          <p>Add friction where the autopilot lives. Willpower fails because a feed is always one free tap away &mdash; so make the tap not free. With LogOut you set a timer before you start scrolling; when it ends, your apps lock via iOS Screen Time and the only way back in is to walk real steps. The scroll session gets a hard ending, and standing up breaks the trance far more reliably than a &ldquo;time's up&rdquo; notification you can dismiss.</p>
+        </div>
+      </details>
+
+      <details class="reveal">
+        <summary>I'm addicted to my phone. Will this actually help?
+          <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+        </summary>
+        <div class="answer">
+          <p>If your problem is compulsive checking and endless feeds, yes &mdash; that's exactly the pattern LogOut is built to interrupt. It doesn't lecture you or shame you with graphs; it simply makes continuing cost more than stopping, and puts a short walk between impulse and feed. Most people notice the reflex-open weakening within a couple of weeks. (If your phone use is seriously affecting your mental health, an app is a tool, not a treatment &mdash; talk to a professional too.)</p>
+        </div>
+      </details>
+
+      <details class="reveal">
+        <summary>How is this different from Apple's built-in Screen Time limits?
+          <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+        </summary>
+        <div class="answer">
+          <p>Apple's app limits end with an &ldquo;Ignore Limit&rdquo; button &mdash; one tap and you're back in the feed. LogOut uses the same system-level Screen Time enforcement but replaces the free tap with a real cost: steps. You can't talk your way past a pedometer. Same shield, an actual lock on it.</p>
+        </div>
+      </details>
+
+      <details class="reveal">
+        <summary>Can't I just cheat by shaking my phone?
+          <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+        </summary>
+        <div class="answer">
+          <p>You can try &mdash; the motion coprocessor won't be impressed. It's the same dedicated hardware Apple uses for fitness tracking, and it's built to tell real gait from hand-waving. Honestly though, if you're shaking your phone in your kitchen to get back into TikTok, that's a moment of clarity all by itself.</p>
+        </div>
+      </details>
+
+      <details class="reveal">
+        <summary>What if there's a genuine emergency?
+          <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+        </summary>
+        <div class="answer">
+          <p>Phone calls, Messages, and system apps are never blocked. And for true emergencies, LogOut includes an <strong>Emergency Bypass</strong> that lifts the lock immediately &mdash; it's there for real life, not for losing an argument with your step goal.</p>
+        </div>
+      </details>
+
+      <details class="reveal">
+        <summary>Which apps get blocked?
+          <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+        </summary>
+        <div class="answer">
+          <p>By default, every non-essential category: Social Media, Entertainment, Games, Browsers, Shopping and more. iOS categorises your apps automatically, so it works out of the box. You can customise your Focus Rules, but LogOut is deliberately opinionated &mdash; it's designed to protect you from your future self.</p>
+        </div>
+      </details>
+
+      <details class="reveal">
+        <summary>What happens if I force-quit LogOut?
+          <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+        </summary>
+        <div class="answer">
+          <p>Nothing changes. The lock is enforced by iOS Screen Time at the system level, backed by a background extension that keeps running whether or not the app is open. The walk is still the way out.</p>
+        </div>
+      </details>
+
+      <details class="reveal">
+        <summary>Do I need an account?
+          <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+        </summary>
+        <div class="answer">
+          <p>No. LogOut works fully without one. An optional account (Sign in with Apple, Google, or email) syncs your session history and settings across reinstalls &mdash; that's all it's for.</p>
+        </div>
+      </details>
+
+      <details class="reveal">
+        <summary>Where does my data go?
+          <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+        </summary>
+        <div class="answer">
+          <p>Steps are counted on-device. Which apps you block never leaves your phone &mdash; Apple stores those choices as opaque tokens that even we can't read. No ads, no data sales, ever. The details live in our <a href="privacy.html" style="color: var(--green-lite);">privacy policy</a>, which is written in actual English.</p>
+        </div>
+      </details>
+
+      <details class="reveal">
+        <summary>How much does it cost?
+          <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+        </summary>
+        <div class="answer">
+          <p>LogOut is free for your first 7 days &mdash; every feature, no paywall during onboarding. After that it's a simple subscription, cancel anytime. If a week of it doesn't change how you use your phone, it's not for you, and that's fine.</p>
+        </div>
+      </details>
+
+      <details class="reveal">
+        <summary>What do I need to run it?
+          <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+        </summary>
+        <div class="answer">
+          <p>An iPhone on iOS 17 or later, and a one-time Screen Time permission so LogOut can do its job. Apple Watch is supported but optional.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= FINAL CTA ========================= -->
+<section class="final">
+  <div class="glow green" style="width:700px;height:480px;bottom:-220px;left:50%;margin-left:-350px;"></div>
+  <div class="wrap">
+    <h2 class="display reveal" style="font-size: clamp(34px, 5.4vw, 54px);">
+      Thirty steps.<br><span class="accent">That's the whole ask.</span>
+    </h2>
+    <p class="lede reveal" style="--d:100ms; margin: 0 auto 36px;">
+      Set one timer tonight and see what your evening looks like on the other side.
+    </p>
+    <div class="reveal" style="--d:200ms">
+      <!-- href injected by assets/site.js (APP_STORE_URL) -->
+      <a class="btn-store" data-app-store href="#">
+        <svg width="26" height="30" viewBox="0 0 26 30" fill="#fff" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M21.7 15.9c0-3.4 2.8-5 2.9-5.1-1.6-2.3-4-2.6-4.9-2.7-2.1-.2-4.1 1.2-5.1 1.2-1 0-2.7-1.2-4.4-1.2C8 8.2 5.9 9.5 4.7 11.5c-2.4 4.1-.6 10.2 1.7 13.5 1.1 1.6 2.5 3.5 4.2 3.4 1.7-.1 2.3-1.1 4.4-1.1 2 0 2.6 1.1 4.4 1.1 1.8 0 3-1.7 4.1-3.3 1.3-1.9 1.8-3.7 1.9-3.8-.1-.1-3.6-1.4-3.7-5.4zM18.3 5.8c.9-1.1 1.6-2.7 1.4-4.3-1.4.1-3 .9-4 2-.9 1-1.7 2.7-1.5 4.2 1.6.2 3.1-.8 4.1-1.9z"/>
+        </svg>
+        <span class="lines">
+          <span class="small">Download on the</span>
+          <span class="big">App&nbsp;Store</span>
+        </span>
+      </a>
+    </div>
+    <p class="cta-note reveal" style="--d:280ms">Requires iOS 17 or later &middot; Free for your first 7 days</p>
+  </div>
+</section>
+
+<footer class="site">
+  <a class="foot-brand" href="index.html" aria-label="LogOut home">
+    <img class="mark" src="assets/logo.png" alt="">
+    <img class="word" src="assets/wordmark.png" alt="LogOut">
+  </a>
+  <nav>
+    <a href="how-it-works.html">How it works</a>
+    <a href="why.html">Why walking</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a href="mailto:support@logoutapp.net">Support</a>
+  </nav>
+  <p class="fine">&copy; 2026 LogOut. Made for people who'd rather be living.</p>
+</footer>
+
+<script src="assets/site.js"></script>
+
+</body>
+</html>
