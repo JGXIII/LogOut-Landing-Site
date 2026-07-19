@@ -16,7 +16,7 @@
    those buttons fall back to the beta-access mailto so nothing
    on the site ever dead-ends.
    ───────────────────────────────────────────────────────────── */
-const APP_STORE_URL = "";
+const APP_STORE_URL = "https://apps.apple.com/us/app/logout-screen-time-blocker/id6766398365";
 
 const BETA_FALLBACK = "mailto:support@logoutapp.net?subject=LogOut%20beta%20access";
 
